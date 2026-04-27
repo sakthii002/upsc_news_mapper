@@ -25,23 +25,23 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install -r upsc_news_mapper/requirements.txt
+          pip install -r requirements.txt
 
       - name: Create data directory
-        run: mkdir -p upsc_news_mapper/data
+        run: mkdir -p data
 
       - name: Run Scraper and Mapper
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PYTHONPATH: ${{ github.workspace }}/upsc_news_mapper
+          PYTHONPATH: ${{ github.workspace }}
         run: |
-          python upsc_news_mapper/main.py
+          python main.py
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add upsc_news_mapper/data/news_data.json
+          git add data/news_data.json
           git commit -m "Update daily news data [skip ci]" || echo "No changes to commit"
           git pull --rebase origin main
           git push origin main

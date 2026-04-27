@@ -10,7 +10,7 @@ st.markdown("Mapping *The Hindu* news to UPSC Prelims & Mains Syllabus.")
 
 def load_data():
     try:
-        with open("upsc_news_mapper/data/news_data.json", "r") as f:
+        with open("data/news_data.json", "r") as f:
             return json.load(f)
     except FileNotFoundError:
         return []
