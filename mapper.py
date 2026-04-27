@@ -59,8 +59,8 @@ def process_and_save(articles, api_key):
             print(f"Model {name} not found or initialization failed, trying next...")
     
     if not model:
-        print("Error: None of the requested models could be initialized. Using fallback gemini-1.5-flash.")
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        print("Error: None of the requested models could be initialized. Using fallback gemini-flash-lite-latest.")
+        model = genai.GenerativeModel('gemini-flash-lite-latest')
     
     processed_news = []
     
