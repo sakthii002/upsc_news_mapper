@@ -41,8 +41,8 @@ def analyze_article(model, article):
 def process_and_save(articles, api_key):
     genai.configure(api_key=api_key)
     
-    # User-specified model priority order starting from 3-flash-preview
-    model_names = ['gemini-3-flash-preview', 'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-flash-lite-latest']
+    # User-specified model priority order starting from 3-flash-preview (Pro removed)
+    model_names = ['gemini-3-flash-preview', 'gemini-2.5-flash', 'gemini-flash-lite-latest']
     current_model_idx = 0
     
     processed_news = []
