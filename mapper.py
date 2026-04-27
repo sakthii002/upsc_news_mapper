@@ -44,23 +44,22 @@ def analyze_article(model, article):
 def process_and_save(articles, api_key):
     genai.configure(api_key=api_key)
     
-    # Use latest April 2026 models with fallback
-    # gemini-3.1-pro is the flagship, gemini-3.1-flash is the high-speed variant
-    model_names = ['gemini-3.1-pro', 'gemini-3.1-flash']
+    # User-specified model priority order
+    model_names = ['gemini-2.5-pro', 'gemini-3-flash-preview', 'gemini-2.5-flash']
     model = None
     
     for name in model_names:
         try:
             temp_model = genai.GenerativeModel(name)
-            # Test connectivity/existence with a simple call if possible, or just proceed
+            # Connectivity test not performed here to avoid unnecessary quota usage
             model = temp_model
-            print(f"Using model: {name}")
+            print(f"Attempting to use model: {name}")
             break
         except Exception as e:
-            print(f"Model {name} not available, trying next...")
+            print(f"Model {name} not found or initialization failed, trying next...")
     
     if not model:
-        print("Error: No valid Gemini models found. Using fallback gemini-1.5-flash.")
+        print("Error: None of the requested models could be initialized. Using fallback gemini-1.5-flash.")
         model = genai.GenerativeModel('gemini-1.5-flash')
     
     processed_news = []
