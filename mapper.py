@@ -60,6 +60,8 @@ def process_and_save(articles, api_key):
     
     # Save to JSON
     output_path = "upsc_news_mapper/data/news_data.json"
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    
     existing_data = []
     if os.path.exists(output_path):
         with open(output_path, 'r') as f:
