@@ -1,28 +1,33 @@
 import os
-import scraper
-import mapper
-
 import sys
 import traceback
+
+# Move prints and status to top to avoid import hangs
+print(">>> INITIALIZING UPSC NEWS MAPPER...")
+print(">>> OS:", sys.platform)
+print(">>> PYTHON VERSION:", sys.version)
+
+import scraper
+import mapper
 
 def main():
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:
-        print("Error: GEMINI_API_KEY not found in environment variables.")
+        print("CRITICAL ERROR: GEMINI_API_KEY not found in environment variables.")
         sys.exit(1)
 
-    print("Starting Daily News Scrape...")
+    print(">>> STARTING DAILY NEWS SCRAPE...")
     try:
         print("Step 1: Fetching articles from RSS feeds...")
         articles = scraper.fetch_articles()
         
         if not articles:
-            print("No articles fetched from RSS feeds. Exiting gracefully.")
+            print("Step 1 Result: No new articles fetched. Everything is up to date.")
             return
             
-        print(f"Step 2: Fetched {len(articles)} articles. Starting AI analysis and mapping...")
+        print(f"Step 2: Fetched {len(articles)} articles. Starting AI analysis...")
         count = mapper.process_and_save(articles, api_key)
-        print(f"Step 3: Successfully processed and saved {count} UPSC-relevant articles.")
+        print(f"Step 3: Processed {count} UPSC-relevant articles.")
     except Exception as e:
         print("-" * 30)
         print("CRITICAL ERROR DURING EXECUTION:")

@@ -1,9 +1,11 @@
 import feedparser
-from newspaper import Article
+import requests
+from bs4 import BeautifulSoup
 import time
+import socket
 
-from newspaper import Article, Config
-import time
+# Set global timeout to prevent hanging
+socket.setdefaulttimeout(30)
 
 FEEDS = {
     "National": "https://www.thehindu.com/news/national/feeder/default.rss",
@@ -13,13 +15,27 @@ FEEDS = {
     "Sci-Tech": "https://www.thehindu.com/sci-tech/feeder/default.rss"
 }
 
+def get_article_text(url):
+    try:
+        headers = {'User-Agent': 'Mozilla/5.0'}
+        response = requests.get(url, headers=headers, timeout=20)
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.content, 'html.parser')
+            # The Hindu usually stores content in these div classes
+            content_div = soup.find('div', class_='article--container') or \
+                          soup.find('div', class_='article-body-container') or \
+                          soup.find('div', class_='content-body')
+            
+            if content_div:
+                paragraphs = content_div.find_all('p')
+                return "\n".join([p.get_text() for p in paragraphs])
+            return ""
+    except Exception as e:
+        print(f"  !! Error downloading {url}: {e}")
+    return ""
+
 def fetch_articles():
     articles_data = []
-    # Setup newspaper config to prevent hangs
-    config = Config()
-    config.request_timeout = 10 # 10 second timeout per article
-    config.fetch_images = False  # Faster
-    config.memoize_articles = False
     
     for section, url in FEEDS.items():
         print(f"Fetching {section} news...")
@@ -27,19 +43,17 @@ def fetch_articles():
             feed = feedparser.parse(url)
             for entry in feed.entries[:5]:
                 try:
-                    article = Article(entry.link, config=config)
-                    article.download()
-                    if article.download_state == 2:
-                        article.parse()
+                    text = get_article_text(entry.link)
+                    if text:
                         articles_data.append({
                             "title": entry.title,
                             "link": entry.link,
                             "published": entry.published if hasattr(entry, 'published') else time.strftime("%Y-%m-%d"),
                             "section": section,
-                            "text": article.text
+                            "text": text
                         })
                     else:
-                        print(f"  !! Download failed (Timeout/Error): {entry.link}")
+                        print(f"  !! No text found for {entry.link}")
                 except Exception as e:
                     print(f"  !! Error parsing {entry.link}: {e}")
         except Exception as e:

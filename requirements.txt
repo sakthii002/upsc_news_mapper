@@ -1,6 +1,6 @@
 feedparser
-newspaper3k
+requests
+beautifulsoup4
 google-generativeai
 streamlit
 pandas
-lxml_html_clean
