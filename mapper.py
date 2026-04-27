@@ -41,8 +41,8 @@ def analyze_article(model, article):
 def process_and_save(articles, api_key):
     genai.configure(api_key=api_key)
     
-    # User-specified model priority order
-    model_names = ['gemini-2.5-pro', 'gemini-3-flash-preview', 'gemini-2.5-flash', 'gemini-flash-lite-latest']
+    # User-specified model priority order starting from 3-flash-preview
+    model_names = ['gemini-3-flash-preview', 'gemini-2.5-pro', 'gemini-2.5-flash', 'gemini-flash-lite-latest']
     current_model_idx = 0
     
     processed_news = []
@@ -51,15 +51,18 @@ def process_and_save(articles, api_key):
         print(f"Analyzing: {article['title']}")
         success = False
         
+        # Try current and subsequent models until success or exhaustion
         while current_model_idx < len(model_names) and not success:
             model_name = model_names[current_model_idx]
+            print(f"  -> Using model: {model_name}")
             model = genai.GenerativeModel(model_name)
             
             try:
                 analysis = analyze_article(model, article)
-                success = True # Successfully called the API (even if it returns None due to safety)
+                success = True # Successfully got a response (even if None)
                 
                 if analysis and analysis.get("is_relevant"):
+                    print(f"     [Relevant] mapped to: {analysis.get('mapping')}")
                     article_data = {
                         "title": article["title"],
                         "link": article["link"],
@@ -71,23 +74,26 @@ def process_and_save(articles, api_key):
                         "date_processed": datetime.now().strftime("%Y-%m-%d")
                     }
                     processed_news.append(article_data)
+                else:
+                    print("     [Not Relevant] skipping.")
                     
             except Exception as e:
                 error_msg = str(e)
-                if "429" in error_msg or "quota" in error_msg.lower():
-                    print(f"Quota exceeded for {model_name}. Switching to next model...")
+                # Check for quota, rate limit, or permission errors that suggest switching
+                if any(x in error_msg.lower() for x in ["429", "quota", "limit", "403", "permission"]):
+                    print(f"  !! Model {model_name} failed (Limit/Permission). Error: {error_msg}")
+                    print(f"  !! Switching from {model_name} to next model...")
                     current_model_idx += 1
-                    if current_model_idx >= len(model_names):
-                        print("All models exhausted their quota. Stopping for today.")
-                        break
+                    # success remains False, so the while loop will retry with the NEW current_model_idx
                 else:
-                    print(f"Error analyzing article '{article['title']}' with {model_name}: {e}")
-                    success = True # Stop retrying this article for other types of errors
+                    print(f"  !! Unexpected error with {model_name}: {e}")
+                    success = True # Stop retrying THIS article for unknown errors to prevent infinite loops
         
         # Add a small delay to avoid hitting rate limits
         time.sleep(1)
         
         if current_model_idx >= len(model_names):
+            print("CRITICAL: All models in the hierarchy have failed or exhausted quota.")
             break
     
     # Save to JSON
