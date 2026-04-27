@@ -22,17 +22,23 @@ Your response MUST be in JSON format with the following keys:
 JSON Output:
 """
 
+import time
+
 def analyze_article(model, article):
     prompt = PROMPT_TEMPLATE.format(title=article['title'], text=article['text'][:5000]) # Limit text to 5000 chars
     try:
         response = model.generate_content(prompt)
-        # Extract JSON from response (handling potential markdown formatting)
+        # Check if response was blocked by safety filters
+        if not response.candidates or not response.candidates[0].content.parts:
+            print(f"Warning: Gemini blocked response for '{article['title']}' (Safety/Other)")
+            return None
+            
         content = response.text.strip()
         if content.startswith("```json"):
             content = content.replace("```json", "").replace("```", "").strip()
         return json.loads(content)
     except Exception as e:
-        print(f"Error analyzing article: {e}")
+        print(f"Error analyzing article '{article['title']}': {e}")
         return None
 
 def process_and_save(articles, api_key):
@@ -57,6 +63,9 @@ def process_and_save(articles, api_key):
                 "date_processed": datetime.now().strftime("%Y-%m-%d")
             }
             processed_news.append(article_data)
+        
+        # Add a small delay to avoid hitting rate limits
+        time.sleep(1)
     
     # Save to JSON
     output_path = "upsc_news_mapper/data/news_data.json"
