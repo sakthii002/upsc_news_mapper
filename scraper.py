@@ -21,8 +21,9 @@ def get_article_text(url):
         response = requests.get(url, headers=headers, timeout=20)
         if response.status_code == 200:
             soup = BeautifulSoup(response.content, 'html.parser')
-            # The Hindu usually stores content in these div classes
-            content_div = soup.find('div', class_='article--container') or \
+            # Updated selectors for The Hindu 2026
+            content_div = soup.find(attrs={'itemprop': 'articleBody'}) or \
+                          soup.find('div', class_='articlebodycontent') or \
                           soup.find('div', class_='article-body-container') or \
                           soup.find('div', class_='content-body')
             
