@@ -35,7 +35,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PYTHONPATH: ${{ github.workspace }}
         run: |
-          python main.py
+          python -u main.py
 
       - name: Commit and Push changes
         run: |

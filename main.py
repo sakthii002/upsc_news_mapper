@@ -2,10 +2,10 @@ import os
 import sys
 import traceback
 
-# Move prints and status to top to avoid import hangs
-print(">>> INITIALIZING UPSC NEWS MAPPER...")
-print(">>> OS:", sys.platform)
-print(">>> PYTHON VERSION:", sys.version)
+# Force unbuffered real-time logs for GitHub Actions
+sys.stdout.reconfigure(line_buffering=True)
+
+print(">>> BOOTING UPSC NEWS MAPPER (REAL-TIME LOGS ENABLED)...")
 
 import scraper
 import mapper
