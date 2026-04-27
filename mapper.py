@@ -26,63 +26,69 @@ import time
 
 def analyze_article(model, article):
     prompt = PROMPT_TEMPLATE.format(title=article['title'], text=article['text'][:5000]) # Limit text to 5000 chars
-    try:
-        response = model.generate_content(prompt)
-        # Check if response was blocked by safety filters
-        if not response.candidates or not response.candidates[0].content.parts:
-            print(f"Warning: Gemini blocked response for '{article['title']}' (Safety/Other)")
-            return None
-            
-        content = response.text.strip()
-        if content.startswith("```json"):
-            content = content.replace("```json", "").replace("```", "").strip()
-        return json.loads(content)
-    except Exception as e:
-        print(f"Error analyzing article '{article['title']}': {e}")
+    response = model.generate_content(prompt)
+    
+    # Check if response was blocked by safety filters
+    if not response.candidates or not response.candidates[0].content.parts:
+        print(f"Warning: Gemini blocked response for '{article['title']}' (Safety/Other)")
         return None
+        
+    content = response.text.strip()
+    if content.startswith("```json"):
+        content = content.replace("```json", "").replace("```", "").strip()
+    return json.loads(content)
 
 def process_and_save(articles, api_key):
     genai.configure(api_key=api_key)
     
     # User-specified model priority order
-    model_names = ['gemini-2.5-pro', 'gemini-3-flash-preview', 'gemini-2.5-flash']
-    model = None
-    
-    for name in model_names:
-        try:
-            temp_model = genai.GenerativeModel(name)
-            # Connectivity test not performed here to avoid unnecessary quota usage
-            model = temp_model
-            print(f"Attempting to use model: {name}")
-            break
-        except Exception as e:
-            print(f"Model {name} not found or initialization failed, trying next...")
-    
-    if not model:
-        print("Error: None of the requested models could be initialized. Using fallback gemini-flash-lite-latest.")
-        model = genai.GenerativeModel('gemini-flash-lite-latest')
+    model_names = ['gemini-2.5-pro', 'gemini-3-flash-preview', 'gemini-2.5-flash', 'gemini-flash-lite-latest']
+    current_model_idx = 0
     
     processed_news = []
     
     for article in articles:
         print(f"Analyzing: {article['title']}")
-        analysis = analyze_article(model, article)
+        success = False
         
-        if analysis and analysis.get("is_relevant"):
-            article_data = {
-                "title": article["title"],
-                "link": article["link"],
-                "published": article["published"],
-                "section": article["section"],
-                "summary": analysis["summary"],
-                "mapping": analysis["mapping"],
-                "analysis": analysis["analysis"],
-                "date_processed": datetime.now().strftime("%Y-%m-%d")
-            }
-            processed_news.append(article_data)
+        while current_model_idx < len(model_names) and not success:
+            model_name = model_names[current_model_idx]
+            model = genai.GenerativeModel(model_name)
+            
+            try:
+                analysis = analyze_article(model, article)
+                success = True # Successfully called the API (even if it returns None due to safety)
+                
+                if analysis and analysis.get("is_relevant"):
+                    article_data = {
+                        "title": article["title"],
+                        "link": article["link"],
+                        "published": article["published"],
+                        "section": article["section"],
+                        "summary": analysis["summary"],
+                        "mapping": analysis["mapping"],
+                        "analysis": analysis["analysis"],
+                        "date_processed": datetime.now().strftime("%Y-%m-%d")
+                    }
+                    processed_news.append(article_data)
+                    
+            except Exception as e:
+                error_msg = str(e)
+                if "429" in error_msg or "quota" in error_msg.lower():
+                    print(f"Quota exceeded for {model_name}. Switching to next model...")
+                    current_model_idx += 1
+                    if current_model_idx >= len(model_names):
+                        print("All models exhausted their quota. Stopping for today.")
+                        break
+                else:
+                    print(f"Error analyzing article '{article['title']}' with {model_name}: {e}")
+                    success = True # Stop retrying this article for other types of errors
         
         # Add a small delay to avoid hitting rate limits
         time.sleep(1)
+        
+        if current_model_idx >= len(model_names):
+            break
     
     # Save to JSON
     output_path = "data/news_data.json"
