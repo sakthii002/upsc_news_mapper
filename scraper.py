@@ -15,7 +15,7 @@ def fetch_articles():
     for section, url in FEEDS.items():
         print(f"Fetching {section} news...")
         feed = feedparser.parse(url)
-        for entry in feed.entries[:10]:  # Limit to 10 articles per section for performance
+        for entry in feed.entries[:5]:  # Reduced from 10 to 5 to save AI tokens
             try:
                 article = Article(entry.link)
                 article.download()

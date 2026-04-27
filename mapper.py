@@ -59,12 +59,32 @@ def save_current_progress(processed_news):
 def process_and_save(articles, api_key):
     genai.configure(api_key=api_key)
     
+    # Load existing data to skip duplicates and save tokens
+    output_path = "data/news_data.json"
+    existing_links = set()
+    if os.path.exists(output_path):
+        with open(output_path, 'r') as f:
+            try:
+                existing_data = json.load(f)
+                existing_links = {a['link'] for a in existing_data}
+            except:
+                pass
+
     model_names = ['gemini-3-flash-preview', 'gemini-2.5-flash', 'gemini-flash-lite-latest']
     current_model_idx = 0
     processed_news_batch = []
     
-    total = len(articles)
-    for i, article in enumerate(articles):
+    # Filter out articles already in our database
+    new_articles = [a for a in articles if a['link'] not in existing_links]
+    total = len(new_articles)
+    
+    if total == 0:
+        print("No new articles to process. Everything is up to date!")
+        return 0
+
+    print(f"Found {total} new articles to analyze.")
+    
+    for i, article in enumerate(new_articles):
         print(f"[{i+1}/{total}] Analyzing: {article['title']}")
         success = False
         
