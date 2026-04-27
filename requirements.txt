@@ -1,0 +1,6 @@
+feedparser
+newspaper3k
+google-generativeai
+streamlit
+pandas
+lxml_html_clean
