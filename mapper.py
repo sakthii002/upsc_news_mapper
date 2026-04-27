@@ -38,65 +38,7 @@ def analyze_article(model, article):
         content = content.replace("```json", "").replace("```", "").strip()
     return json.loads(content)
 
-def process_and_save(articles, api_key):
-    genai.configure(api_key=api_key)
-    
-    # User-specified model priority order starting from 3-flash-preview (Pro removed)
-    model_names = ['gemini-3-flash-preview', 'gemini-2.5-flash', 'gemini-flash-lite-latest']
-    current_model_idx = 0
-    
-    processed_news = []
-    
-    for article in articles:
-        print(f"Analyzing: {article['title']}")
-        success = False
-        
-        # Try current and subsequent models until success or exhaustion
-        while current_model_idx < len(model_names) and not success:
-            model_name = model_names[current_model_idx]
-            print(f"  -> Using model: {model_name}")
-            model = genai.GenerativeModel(model_name)
-            
-            try:
-                analysis = analyze_article(model, article)
-                success = True # Successfully got a response (even if None)
-                
-                if analysis and analysis.get("is_relevant"):
-                    print(f"     [Relevant] mapped to: {analysis.get('mapping')}")
-                    article_data = {
-                        "title": article["title"],
-                        "link": article["link"],
-                        "published": article["published"],
-                        "section": article["section"],
-                        "summary": analysis["summary"],
-                        "mapping": analysis["mapping"],
-                        "analysis": analysis["analysis"],
-                        "date_processed": datetime.now().strftime("%Y-%m-%d")
-                    }
-                    processed_news.append(article_data)
-                else:
-                    print("     [Not Relevant] skipping.")
-                    
-            except Exception as e:
-                error_msg = str(e)
-                # Check for quota, rate limit, or permission errors that suggest switching
-                if any(x in error_msg.lower() for x in ["429", "quota", "limit", "403", "permission"]):
-                    print(f"  !! Model {model_name} failed (Limit/Permission). Error: {error_msg}")
-                    print(f"  !! Switching from {model_name} to next model...")
-                    current_model_idx += 1
-                    # success remains False, so the while loop will retry with the NEW current_model_idx
-                else:
-                    print(f"  !! Unexpected error with {model_name}: {e}")
-                    success = True # Stop retrying THIS article for unknown errors to prevent infinite loops
-        
-        # Add a small delay to avoid hitting rate limits
-        time.sleep(1)
-        
-        if current_model_idx >= len(model_names):
-            print("CRITICAL: All models in the hierarchy have failed or exhausted quota.")
-            break
-    
-    # Save to JSON
+def save_current_progress(processed_news):
     output_path = "data/news_data.json"
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     
@@ -108,13 +50,67 @@ def process_and_save(articles, api_key):
             except:
                 existing_data = []
     
-    # Append new data and remove duplicates based on link
+    # Merge and deduplicate
     combined_data = {a['link']: a for a in existing_data + processed_news}.values()
     
     with open(output_path, 'w') as f:
         json.dump(list(combined_data), f, indent=4)
+
+def process_and_save(articles, api_key):
+    genai.configure(api_key=api_key)
     
-    return len(processed_news)
+    model_names = ['gemini-3-flash-preview', 'gemini-2.5-flash', 'gemini-flash-lite-latest']
+    current_model_idx = 0
+    processed_news_batch = []
+    
+    total = len(articles)
+    for i, article in enumerate(articles):
+        print(f"[{i+1}/{total}] Analyzing: {article['title']}")
+        success = False
+        
+        while current_model_idx < len(model_names) and not success:
+            model_name = model_names[current_model_idx]
+            model = genai.GenerativeModel(model_name)
+            
+            try:
+                # Use a try-block with a potential timeout if the library supports it, 
+                # otherwise just the standard call
+                analysis = analyze_article(model, article)
+                success = True
+                
+                if analysis and analysis.get("is_relevant"):
+                    print(f"     ✅ [Relevant] GS Mapping: {analysis.get('mapping')}")
+                    article_data = {
+                        "title": article["title"],
+                        "link": article["link"],
+                        "published": article["published"],
+                        "section": article["section"],
+                        "summary": analysis["summary"],
+                        "mapping": analysis["mapping"],
+                        "analysis": analysis["analysis"],
+                        "date_processed": datetime.now().strftime("%Y-%m-%d")
+                    }
+                    processed_news_batch.append(article_data)
+                    # Save after every successful relevant article to prevent data loss
+                    save_current_progress([article_data])
+                else:
+                    print("     ⏭️ [Not Relevant] skipping.")
+                    
+            except Exception as e:
+                error_msg = str(e)
+                if any(x in error_msg.lower() for x in ["429", "quota", "limit", "403", "permission"]):
+                    print(f"  !! Model {model_name} exhausted. Switching...")
+                    current_model_idx += 1
+                else:
+                    print(f"  !! Error with {model_name}: {e}")
+                    success = True 
+        
+        time.sleep(1)
+        if current_model_idx >= len(model_names):
+            print("CRITICAL: All models exhausted.")
+            break
+    
+    return len(processed_news_batch)
 
 if __name__ == "__main__":
     # This is for local testing if API key is in env
