@@ -43,4 +43,5 @@ jobs:
           git config --local user.name "GitHub Action"
           git add upsc_news_mapper/data/news_data.json
           git commit -m "Update daily news data [skip ci]" || echo "No changes to commit"
-          git push
+          git pull --rebase origin main
+          git push origin main
