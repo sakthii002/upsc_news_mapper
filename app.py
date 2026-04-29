@@ -162,8 +162,31 @@ st.markdown("""
         font-weight: 700 !important;
         letter-spacing: -0.025em;
     }
+    .summary-text-styled {
+        color: #cbd5e1 !important; /* Lighter slate */
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+    .analysis-text-styled {
+        color: #94a3b8 !important; /* Darker slate */
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
 </style>
 """, unsafe_allow_html=True)
+
+def format_as_bullets(text):
+    if not text: return ""
+    # Remove existing numbers like "1. ", "2. " or dashes at start
+    lines = text.split('\n')
+    cleaned_lines = []
+    for line in lines:
+        line = line.strip()
+        if not line: continue
+        # Remove common list prefixes
+        line = re.sub(r'^(\d+[\.\)]|[\*\-\•])\s*', '', line)
+        cleaned_lines.append(f"• {line}")
+    return "\n".join(cleaned_lines)
 
 # ─────────────────────────────────────────────
 # State Management
@@ -267,9 +290,9 @@ def render_article_card(row, idx, tab_prefix):
         col1, col2 = st.columns([3, 1])
         with col1:
             with st.expander("📝 Summary", expanded=False):
-                st.write(row['summary'])
+                st.markdown(f'<div class="summary-text-styled">{format_as_bullets(row["summary"])}</div>', unsafe_allow_html=True)
             with st.expander("⚖️ UPSC Analysis", expanded=False):
-                st.write(row['analysis'])
+                st.markdown(f'<div class="analysis-text-styled">{format_as_bullets(row["analysis"])}</div>', unsafe_allow_html=True)
         
         with col2:
             st.markdown("<p style='font-size:0.7rem; color:#94a3b8; font-weight:600; margin-bottom:5px;'>SYLLABUS MAPPING</p>", unsafe_allow_html=True)

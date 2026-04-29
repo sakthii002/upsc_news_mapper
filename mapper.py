@@ -17,7 +17,7 @@ Your response MUST be in JSON format with the following keys:
 1. "is_relevant": (boolean) Whether this article is relevant to the UPSC syllabus.
 2. "summary": (string) A concise summary (3-5 bullet points) of the article.
 3. "mapping": (list of strings) Map the article to specific GS papers (GS1, GS2, GS3, GS4) and specific syllabus topics (e.g., "GS2: International Relations", "GS3: Environment", "Prelims: Science & Tech").
-4. "analysis": (string) A brief "Why it matters for UPSC" note.
+4. "analysis": (string) A concise "Why it matters for UPSC" note in 3-5 bullet points.
 
 JSON Output:
 """
