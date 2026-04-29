@@ -2,6 +2,9 @@ import streamlit as st
 import json
 import pandas as pd
 from datetime import datetime
+import os
+import scraper
+import mapper
 
 # Page Configuration
 st.set_page_config(
@@ -111,12 +114,34 @@ def load_data():
 
 raw_data = load_data()
 
+# Sidebar Actions
+st.sidebar.header("Actions")
+if st.sidebar.button("🔄 Fetch & Analyze News", help="Manually trigger the scraper and AI analysis"):
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        st.sidebar.error("GEMINI_API_KEY not found in environment.")
+    else:
+        with st.status("Fetching news from RSS feeds...", expanded=True) as status:
+            try:
+                articles = scraper.fetch_articles()
+                if not articles:
+                    status.update(label="No new articles found.", state="complete")
+                else:
+                    status.write(f"Found {len(articles)} articles. Starting AI analysis...")
+                    count = mapper.process_and_save(articles, api_key)
+                    status.update(label=f"Successfully processed {count} UPSC-relevant articles!", state="complete")
+                    st.cache_data.clear()
+                    st.rerun()
+            except Exception as e:
+                status.update(label="Error during execution.", state="error")
+                st.sidebar.error(f"Error: {e}")
+
 # Header
 st.title("📰 UPSC Daily News Mapper")
 st.markdown("Mapping *The Hindu* news to UPSC Prelims & Mains Syllabus with AI precision.")
 
 if not raw_data:
-    st.info("No news data available yet. Please run the scraper.")
+    st.info("No news data available yet. Use the 'Fetch & Analyze News' button in the sidebar to start.")
 else:
     df = pd.DataFrame(raw_data)
     
@@ -129,7 +154,7 @@ else:
     
     # Sidebar: Global Filters
     st.sidebar.header("Global Filters")
-    all_dates = sorted(df['date_processed'].unique().tolist(), reverse=True)
+    all_dates = sorted(df['date_processed'].unique().tolist(), reverse=True) if not df.empty else []
     selected_date = st.sidebar.selectbox("Select Date", ["All Dates"] + all_dates)
     
     # Apply Date Filter
