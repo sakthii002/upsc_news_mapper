@@ -22,6 +22,13 @@ if not data:
 else:
     df = pd.DataFrame(data)
     
+    # Sort by newest first (using published date, falling back to date_processed)
+    if not df.empty:
+        df['sort_date'] = pd.to_datetime(df['published'], errors='coerce')
+        if 'date_processed' in df.columns:
+            df['sort_date'] = df['sort_date'].fillna(pd.to_datetime(df['date_processed'], errors='coerce'))
+        df = df.sort_values(by='sort_date', ascending=False).drop(columns=['sort_date'])
+
     # Sidebar filters
     st.sidebar.header("Filters")
     
