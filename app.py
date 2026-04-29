@@ -177,13 +177,19 @@ st.markdown("""
 
 def format_as_bullets(text):
     if not text: return ""
-    # Remove existing numbers like "1. ", "2. " or dashes at start
-    lines = text.split('\n')
+    
+    # Handle list input if the AI returned a JSON list
+    if isinstance(text, list):
+        lines = text
+    else:
+        # If it's a string, split by newlines
+        lines = str(text).split('\n')
+        
     cleaned_lines = []
     for line in lines:
-        line = line.strip()
+        line = str(line).strip()
         if not line: continue
-        # Remove common list prefixes
+        # Remove common list prefixes (numbers, dashes, stars)
         line = re.sub(r'^(\d+[\.\)]|[\*\-\•])\s*', '', line)
         cleaned_lines.append(f"• {line}")
     return "\n".join(cleaned_lines)
