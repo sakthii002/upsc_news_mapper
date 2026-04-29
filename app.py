@@ -154,6 +154,13 @@ else:
         "Others": "Others"
     }
 
+    def simplify_tag(tag):
+        # Truncate to 2 levels: everything before the first ' (' or ' \u2013' or ' - '
+        for separator in [' (', ' \u2013', ' - ']:
+            if separator in tag:
+                tag = tag.split(separator)[0]
+        return tag.strip()
+
     def render_article_card(row, idx, tab_prefix):
         with st.container():
             st.markdown(f"""
@@ -174,7 +181,9 @@ else:
             with cols[1]:
                 st.markdown("**Syllabus Tags**")
                 for tag in row['mapping']:
-                    st.button(tag, key=f"{tab_prefix}_{idx}_{tag}", on_click=set_filter, args=(tag,))
+                    # Use simplified tag for filtering even if label is full
+                    simple = simplify_tag(tag)
+                    st.button(tag, key=f"{tab_prefix}_{idx}_{tag}", on_click=set_filter, args=(simple,))
             st.markdown("<br>", unsafe_allow_html=True)
 
     for i, tab_name in enumerate(["All News", "Prelims", "GS 1", "GS 2", "GS 3", "GS 4", "Others"]):
@@ -188,18 +197,21 @@ else:
                 
                 # Further divide by syllabus headings within the paper
                 if not filtered_df.empty:
-                    # Extract unique sub-headings for this paper
+                    # Extract simplified sub-headings for this paper
                     sub_headings = set()
                     for m_list in filtered_df['mapping']:
                         for m in m_list:
                             if m.startswith(target):
-                                sub_headings.add(m)
+                                sub_headings.add(simplify_tag(m))
                     
                     sorted_sub_headings = sorted(list(sub_headings))
                     if len(sorted_sub_headings) > 1:
                         selected_sub = st.pills("Specific Topics", ["All " + tab_name] + sorted_sub_headings, key=f"pills_{tab_name}")
                         if selected_sub and not selected_sub.startswith("All"):
-                            filtered_df = filtered_df[filtered_df['mapping'].apply(lambda x: selected_sub in x)]
+                            # Filter by simplified tag prefix/match
+                            filtered_df = filtered_df[filtered_df['mapping'].apply(
+                                lambda x: any(m.startswith(selected_sub) for m in x)
+                            )]
 
             if filtered_df.empty:
                 st.info(f"No articles found for {tab_name} with current filters.")
