@@ -154,7 +154,7 @@ else:
         "Others": "Others"
     }
 
-    def render_article_card(row, idx):
+    def render_article_card(row, idx, tab_prefix):
         with st.container():
             st.markdown(f"""
             <div class="article-card">
@@ -174,7 +174,7 @@ else:
             with cols[1]:
                 st.markdown("**Syllabus Tags**")
                 for tag in row['mapping']:
-                    st.button(tag, key=f"{idx}_{tag}", on_click=set_filter, args=(tag,))
+                    st.button(tag, key=f"{tab_prefix}_{idx}_{tag}", on_click=set_filter, args=(tag,))
             st.markdown("<br>", unsafe_allow_html=True)
 
     for i, tab_name in enumerate(["All News", "Prelims", "GS 1", "GS 2", "GS 3", "GS 4", "Others"]):
@@ -206,7 +206,7 @@ else:
             else:
                 st.write(f"Showing {len(filtered_df)} articles.")
                 for idx, row in filtered_df.iterrows():
-                    render_article_card(row, idx)
+                    render_article_card(row, idx, tab_name)
 
 # Sidebar Footer
 st.sidebar.markdown("---")
