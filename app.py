@@ -3,8 +3,23 @@ import json
 import pandas as pd
 from datetime import datetime
 import os
+import re
 import scraper
 import mapper
+
+# Global Utility Functions
+def simplify_tag(tag):
+    # Split by common delimiters: ':', '(', '-', '–' (en dash), '—' (em dash)
+    # We want the GS paper and the main topic.
+    parts = re.split(r'[:\(\u2013\u2014\-]', tag)
+    if len(parts) >= 2:
+        paper = parts[0].strip()
+        topic = parts[1].strip()
+        # Special case for 'Prelims' which might not have a colon in some formats
+        if paper == "Prelims":
+            return f"Prelims: {topic}" if topic else "Prelims"
+        return f"{paper}: {topic}"
+    return tag.strip()
 
 # Page Configuration
 st.set_page_config(
@@ -179,20 +194,6 @@ else:
         "GS 4": "GS4",
         "Others": "Others"
     }
-
-    def simplify_tag(tag):
-        import re
-        # Split by common delimiters: ':', '(', '-', '–' (en dash), '—' (em dash)
-        # We want the GS paper and the main topic.
-        parts = re.split(r'[:\(\u2013\u2014\-]', tag)
-        if len(parts) >= 2:
-            paper = parts[0].strip()
-            topic = parts[1].strip()
-            # Special case for 'Prelims' which might not have a colon in some formats
-            if paper == "Prelims":
-                return f"Prelims: {topic}" if topic else "Prelims"
-            return f"{paper}: {topic}"
-        return tag.strip()
 
     def render_article_card(row, idx, tab_prefix):
         with st.container():
