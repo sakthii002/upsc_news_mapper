@@ -165,7 +165,8 @@ else:
     if st.session_state.selected_tag:
         st.info(f"📍 Filtering by Tag: **{st.session_state.selected_tag}**")
         st.button("Clear Tag Filter ✖", on_click=clear_filter)
-        df = df[df['mapping'].apply(lambda x: st.session_state.selected_tag in x)]
+        # Check if the simplified version of any mapping in the article matches the selected tag
+        df = df[df['mapping'].apply(lambda x: any(simplify_tag(m) == st.session_state.selected_tag for m in x))]
 
     # Organized Structure: Tabs
     main_tabs = st.tabs(["All News", "Prelims", "GS 1", "GS 2", "GS 3", "GS 4", "Others"])
@@ -180,10 +181,17 @@ else:
     }
 
     def simplify_tag(tag):
-        # Truncate to 2 levels: everything before the first ' (' or ' \u2013' or ' - '
-        for separator in [' (', ' \u2013', ' - ']:
-            if separator in tag:
-                tag = tag.split(separator)[0]
+        import re
+        # Split by common delimiters: ':', '(', '-', '–' (en dash), '—' (em dash)
+        # We want the GS paper and the main topic.
+        parts = re.split(r'[:\(\u2013\u2014\-]', tag)
+        if len(parts) >= 2:
+            paper = parts[0].strip()
+            topic = parts[1].strip()
+            # Special case for 'Prelims' which might not have a colon in some formats
+            if paper == "Prelims":
+                return f"Prelims: {topic}" if topic else "Prelims"
+            return f"{paper}: {topic}"
         return tag.strip()
 
     def render_article_card(row, idx, tab_prefix):
@@ -206,7 +214,6 @@ else:
             with cols[1]:
                 st.markdown("**Syllabus Tags**")
                 for tag in row['mapping']:
-                    # Use simplified tag for filtering even if label is full
                     simple = simplify_tag(tag)
                     st.button(tag, key=f"{tab_prefix}_{idx}_{tag}", on_click=set_filter, args=(simple,))
             st.markdown("<br>", unsafe_allow_html=True)
@@ -217,8 +224,8 @@ else:
                 filtered_df = df
             else:
                 target = paper_map[tab_name]
-                # Filter by paper prefix
-                filtered_df = df[df['mapping'].apply(lambda mappings: any(m.startswith(target) for m in mappings))]
+                # Filter by paper prefix (case-insensitive and robust)
+                filtered_df = df[df['mapping'].apply(lambda mappings: any(m.strip().startswith(target) for m in mappings))]
                 
                 # Further divide by syllabus headings within the paper
                 if not filtered_df.empty:
@@ -226,16 +233,16 @@ else:
                     sub_headings = set()
                     for m_list in filtered_df['mapping']:
                         for m in m_list:
-                            if m.startswith(target):
+                            if m.strip().startswith(target):
                                 sub_headings.add(simplify_tag(m))
                     
                     sorted_sub_headings = sorted(list(sub_headings))
                     if len(sorted_sub_headings) > 1:
                         selected_sub = st.pills("Specific Topics", ["All " + tab_name] + sorted_sub_headings, key=f"pills_{tab_name}")
                         if selected_sub and not selected_sub.startswith("All"):
-                            # Filter by simplified tag prefix/match
+                            # Filter by matching the simplified version of any tag in the article
                             filtered_df = filtered_df[filtered_df['mapping'].apply(
-                                lambda x: any(m.startswith(selected_sub) for m in x)
+                                lambda x: any(simplify_tag(m) == selected_sub for m in x)
                             )]
 
             if filtered_df.empty:
