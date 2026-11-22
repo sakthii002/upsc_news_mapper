@@ -97751,5 +97751,408 @@
         ],
         "analysis": "\u2022 Policy Impact: Highlights the success of the 2020 reform that opened up commercial coal mining to private players, ending the erstwhile state monopoly.\n\u2022 Economic Growth & Revenue: Demonstrates how resource monetization through transparent auctions contributes to state revenues and industrial growth.\n\u2022 Ease of Doing Business & Diversification: The entry of 20 first-time players signifies improved market access and investor confidence in India's core infrastructure and energy sectors.\n\u2022 Energy Security vs. Transition: While critical for immediate baseload energy needs and industrial raw material supply, it intersects with India's broader climate commitments and net-zero targets.",
         "date_processed": "2026-11-21"
+    },
+    {
+        "title": "At least nine killed, several injured as vehicle carrying pilgrims rams into truck in Rajasthan\u2019s Kota",
+        "link": "https://www.thehindu.com/news/national/rajasthan/many-killed-several-injured-as-vehicle-carrying-pilgrims-rams-into-truck-in-rajasthans-kota/article71730542.ece",
+        "published": "Sun, 22 Nov 2026 09:41:10 +0530",
+        "section": "National",
+        "summary": [
+            "At least nine members of a family from Maharashtra were killed when their vehicle rammed into a parked truck on the Kota-Udaipur highway in Rajasthan.",
+            "The accident occurred near Shambhupura in the middle of the night while the victims were returning from a pilgrimage to the Khatu Shyam temple.",
+            "Out of the 16 occupants in the vehicle, nine lost their lives and several others sustained injuries.",
+            "The local administration, led by the Additional District Collector, prioritized medical treatment for survivors and initiated post-mortem procedures for the deceased."
+        ],
+        "mapping": [
+            "GS2: Government Policies and Interventions (Road Safety and Regulatory Frameworks)",
+            "GS3: Infrastructure (Roads and Highways)",
+            "GS3: Disaster Management (Accident Response and Mitigation)",
+            "Prelims: Current Events of National Importance"
+        ],
+        "analysis": "This incident is significant for UPSC aspirants due to the following reasons:\n- Road Safety Crisis: It highlights the recurring issue of high fatality rates on Indian highways, a critical concern for infrastructure and public safety governance.\n- Infrastructure Hazards: The accident underscores the danger of 'static hazards' like poorly marked parked trucks on highways, pointing toward a need for stricter enforcement of the Motor Vehicles (Amendment) Act, 2019.\n- Institutional Response: It serves as an example of administrative emergency management, focusing on the 'Golden Hour' concept and the role of district authorities in post-accident relief.\n- Policy Relevance: Such incidents often lead to discussions on the 'Brasilia Declaration on Road Safety' (to which India is a signatory) and the National Road Safety Policy's goal to reduce accidents by 50%.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Andhra Pradesh gets national recognition for its progress in HIV/AIDS control",
+        "link": "https://www.thehindu.com/news/national/andhra-pradesh/andhra-pradesh-gets-national-recognition-for-its-progress-in-hivaids-control/article71728569.ece",
+        "published": "Sun, 22 Nov 2026 09:15:23 +0530",
+        "section": "National",
+        "summary": "\u2022 Andhra Pradesh has achieved national recognition for its progress in HIV/AIDS control, with 16 districts reaching either 'Surakshit' (6 districts) or 'Saksham' (10 districts) status.\n\u2022 The rankings are based on the UNAIDS 95-95-95 targets, which aim to ensure 95% of people living with HIV know their status, 95% are on ART, and 95% achieve viral suppression by 2030.\n\u2022 The state has shown significant statistical improvement, with viral suppression reaching 96.4% and the number of patients on ART increasing by over 24,000 in six months.\n\u2022 Key drivers for this success include the 'Suraksha' portal for real-time monitoring and the 'Each One Reach One' initiative aimed at re-engaging patients who discontinued treatment.",
+        "mapping": [
+            "GS2: Social Justice - Issues relating to development and management of Social Sector/Services relating to Health",
+            "GS2: Governance - Role of technology in governance (e-governance portals)",
+            "GS3: Science and Technology - Developments in the field of health and disease control",
+            "Prelims: Current Affairs - Health indices and international health targets (UNAIDS)"
+        ],
+        "analysis": "\u2022 **International Commitments:** The achievement highlights India's progress toward the UNAIDS 95-95-95 targets and Sustainable Development Goal (SDG) 3.3, which aims to end the epidemic of AIDS by 2030.\n\u2022 **Model for Governance:** The Andhra Pradesh State AIDS Control Society (APSACS) provides a replicable model for other states through its use of digital monitoring (Suraksha portal) and community-centric social initiatives (Each One Reach One).\n\u2022 **Public Health Infrastructure:** The success in viral suppression (96.4%) demonstrates the effectiveness of the decentralized Integrated Counselling and Testing Centres (ICTC) and the robustness of the ART delivery system.\n\u2022 **Data for Mains:** This case study can be used in GS2 answers regarding the 'Social Sector' to illustrate how targeted interventions and technological monitoring can lead to tangible improvements in public health outcomes.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "14-year-old used AI chatbot to hack Agniveer \u2018test\u2019 website, wanted to earn money by selling it on dark web: Delhi police sources",
+        "link": "https://www.thehindu.com/news/cities/Delhi/14-year-old-hacker-held-for-trying-to-sell-private-data-of-4000-agniveers-on-dark-web-delhi-police/article71727963.ece",
+        "published": "Sun, 22 Nov 2026 09:00:26 +0530",
+        "section": "National",
+        "summary": [
+            "A 14-year-old juvenile from Haryana utilized AI chatbots to identify vulnerabilities and hack into a 'test' website designed for Agniveer personnel registration.",
+            "The breach resulted in the unauthorized access of personal data (names and addresses) of approximately 4,000 personnel, which the boy then attempted to sell on the dark web for $500.",
+            "The Delhi Police\u2019s Intelligence Fusion and Strategic Operations (IFSO) unit clarified that only a test environment was compromised, and sensitive records like ranks or results remain secure.",
+            "The incident highlights the growing role of Artificial Intelligence in lowering the barrier for cybercrimes and the involvement of juveniles in high-tech illegal activities."
+        ],
+        "mapping": [
+            "GS3: Internal Security (Cybersecurity and its challenges)",
+            "GS3: Science & Technology (Developments and applications of AI)",
+            "GS2: Governance (Data Protection and Government digital infrastructure)",
+            "GS4: Ethics (Ethical implications of AI and Juvenile Delinquency)",
+            "Prelims: Science & Tech (Dark Web, AI Chatbots, NIC, IFSO)"
+        ],
+        "analysis": [
+            "Dual-use Nature of AI: The case exemplifies how Generative AI can be weaponized for cyber-attacks, necessitating stronger safety guardrails and 'Red Teaming' by AI developers.",
+            "Critical Infrastructure Vulnerability: It underscores the risk to government-linked databases and the importance of securing 'test' or 'staging' environments which are often less protected than main servers.",
+            "Cyber-Sovereignty and Data Privacy: While the breach was limited, the attempt to sell personnel data of the Armed Forces (Agniveers) poses significant concerns for national security and individual privacy.",
+            "Digital Ethics and Juvenile Justice: Highlights a shift in juvenile delinquency towards sophisticated cybercrime, posing a challenge for law enforcement and requiring a focus on digital ethics education."
+        ],
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "T.N. may see solar energy installations slowing down, say energy generators",
+        "link": "https://www.thehindu.com/news/cities/Coimbatore/tn-may-see-solar-energy-installations-slowing-down-say-energy-generators/article71728600.ece",
+        "published": "Sun, 22 Nov 2026 08:02:09 +0530",
+        "section": "National",
+        "summary": "\u2022 Industry representatives warn of a potential slowdown in Tamil Nadu's solar energy installations by 2027 due to administrative delays and policy ambiguities.\n\u2022 Key hurdles include a non-functional single-window approval system for non-FDI projects and mandatory Battery Energy Storage System (BESS) requirements from April 2027, which are expected to escalate costs.\n\u2022 Ambiguities in the BESS policy regarding wheeling charges and the mandate to sell stored energy exclusively to State utilities are causing investor concern.\n\u2022 Operational challenges such as lack of sub-stations, Right of Way (RoW) issues on government lands, and disputed banking charges are further stalling project progress.",
+        "mapping": [
+            "GS3: Infrastructure (Energy)",
+            "GS3: Environment and Conservation (Renewable Energy)",
+            "GS2: Government Policies and Interventions",
+            "Prelims: Indian Economy (Energy Sector & Regulatory Bodies)"
+        ],
+        "analysis": "\u2022 Policy vs. Execution Gap: The article highlights the disconnect between ambitious renewable energy targets and the ground-level bureaucratic hurdles (Ease of Doing Business).\n\u2022 Technological Transition: It underscores the challenges of integrating Battery Energy Storage Systems (BESS), which are crucial for grid stability but currently act as a financial deterrent for developers.\n\u2022 Federal & Local Governance: Illustrates how delays at the rural local body level and lack of inter-departmental coordination (Right of Way issues) can impede national-level climate goals.\n\u2022 Regulatory Clarity: Emphasizes the importance of clear regulatory frameworks (via TNERC) to prevent legal disputes over banking and wheeling charges, which are vital for investor confidence.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Three cyclones in three weeks: What\u2019s happening in the Bay of Bengal? | Explained",
+        "link": "https://www.thehindu.com/news/national/three-cyclones-in-three-weeks-whats-happening-in-the-bay-of-bengal-explained/article71721198.ece",
+        "published": "Sun, 22 Nov 2026 07:45:55 +0530",
+        "section": "National",
+        "summary": [
+            "The Bay of Bengal experienced an unusual frequency of three cyclones (Arnab, Murasu, and Akvan) within a short span of 23 days in late 2026.",
+            "The cyclones made landfall across various points on the eastern coast, including Yanam and Ongole in Andhra Pradesh, and Gopalpur in Odisha.",
+            "Cyclogenesis in this region is driven by three primary factors: atmospheric disturbances, abundant moisture, and favorable wind conditions.",
+            "The article highlights the post-monsoon period (October-December) as a peak season because the withdrawal of the southwest monsoon reduces vertical wind shear, allowing storms to intensify over warm waters."
+        ],
+        "mapping": [
+            "GS1: Important Geophysical phenomena (Cyclones)",
+            "GS1: Factors responsible for the location of primary, secondary, and tertiary sector industries (Coastal vulnerability)",
+            "GS3: Disaster and Disaster Management",
+            "Prelims: Indian Geography - Physical features and Climate"
+        ],
+        "analysis": [
+            "The increasing frequency of cyclonic disturbances in the Bay of Bengal is a recurring theme in GS1 Geography, focusing on the mechanics of tropical cyclones.",
+            "Understanding 'Vertical Wind Shear' and 'Sea Surface Temperature (SST)' is crucial for Prelims conceptual questions on meteorology.",
+            "The specific landfall locations (Yanam, Ongole, Gopalpur) are important for map-based questions and understanding regional vulnerability.",
+            "From a GS3 perspective, this highlights the need for robust disaster preparedness and early warning systems on the East Coast of India, which is historically more prone to storms than the West Coast."
+        ],
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "News in Frames | Living with the wounds of displacement",
+        "link": "https://www.thehindu.com/news/international/news-in-frames-living-withthe-wounds-of-displacement/article71730570.ece",
+        "published": "Sun, 22 Nov 2026 09:13:36 +0530",
+        "section": "International",
+        "summary": [
+            "The International Court of Justice (ICJ) has delivered a landmark ruling holding Myanmar responsible for genocide against the Rohingya minority, marking the first time a state has been held liable for this crime by the world court.",
+            "The crisis originated from decades of systematic discrimination and a 2017 military crackdown that forced over 7.4 lakh Rohingya to flee to Bangladesh, joining an existing refugee population of 1.2 million in Cox\u2019s Bazar.",
+            "Rohingya refugees across India, Malaysia, and Indonesia continue to face legal uncertainty, detention, and hostile reception, while those remaining in Myanmar's Rakhine State are caught in the crossfire between the military and the Arakan Army.",
+            "Despite the legal significance of the ICJ verdict, the immediate prospects for safe repatriation remain bleak due to ongoing civil war in Myanmar and the lack of humanitarian access."
+        ],
+        "mapping": [
+            "GS2: International Relations (India and its neighborhood-relations; Important International institutions)",
+            "GS2: Social Justice (Issues relating to vulnerable sections of the population)",
+            "GS3: Internal Security (Security challenges and their management in border areas)",
+            "Prelims: Current events of international importance (ICJ, Myanmar geography, Refugee conventions)"
+        ],
+        "analysis": [
+            "Evolution of International Jurisprudence: The ICJ ruling sets a vital precedent for the 'Responsibility to Protect' (R2P) and clarifies the legal accountability of sovereign states under the 1948 Genocide Convention.",
+            "India's Diplomatic Balancing Act: The crisis requires India to balance its 'Neighborhood First' policy with Bangladesh and its strategic interests with the Myanmar junta, while addressing internal security concerns regarding illegal migration.",
+            "Humanitarian & Legal Gap: The article highlights the 'protection gap' for refugees in South and Southeast Asia, particularly in countries like India and Indonesia that are not signatories to the 1951 Refugee Convention.",
+            "Regional Instability: The conflict between the Myanmar military and the Arakan Army in Rakhine State poses a direct threat to India\u2019s Kaladan Multi-Modal Transit Transport Project and overall regional connectivity under the 'Act East' policy."
+        ],
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Rescuers say 39 missing after Indonesia factory fire",
+        "link": "https://www.thehindu.com/news/international/rescuers-say-many-missing-after-indonesia-factory-fire/article71730558.ece",
+        "published": "Sun, 22 Nov 2026 09:04:49 +0530",
+        "section": "International",
+        "summary": "\u2022 A major fire broke out at the Fonusa Agung Mulia confectionery factory in Serang district, Indonesia, approximately 50 km from Jakarta.\n\u2022 As of November 22, 2026, 39 people are reported missing and 4 others have been injured in the incident.\n\u2022 Search and Rescue (SAR) operations are being hampered by active fires and structural collapses within the facility.\n\u2022 Local authorities have launched an investigation into the cause of the fire while prioritizing the safety of rescue personnel.",
+        "mapping": [
+            "GS3: Disaster Management (Industrial Disasters)",
+            "GS2: Governance (Labor Laws and Industrial Safety Standards)",
+            "GS3: Economy (Industrial Infrastructure and Safety)",
+            "Prelims: Current Affairs (International Events)"
+        ],
+        "analysis": "\u2022 Industrial Safety: The incident underscores the critical need for stringent fire safety protocols and regular safety audits in manufacturing units, a recurring theme in GS3 Disaster Management.\n\u2022 Global Best Practices: For a UPSC aspirant, this serves as a case study to compare international industrial safety standards with India's Factories Act, 1948, and the Occupational Safety, Health and Working Conditions Code, 2020.\n\u2022 Search and Rescue (SAR) Challenges: It highlights the tactical difficulties faced by SAR teams during active industrial fires, emphasizing the importance of 'Joint SAR' coordination and personnel safety.\n\u2022 Urban Planning: The location of hazardous or large-scale factories near capital regions (Jakarta) raises questions about industrial zoning and disaster mitigation in urban peripheries.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Key takeaways from the Quad, ASEAN-India, and East Asia Summits\u00a0in Manila | Explained",
+        "link": "https://www.thehindu.com/news/international/key-takeaways-from-the-quad-asean-india-and-east-asia-summitsin-manila-explained/article71727587.ece",
+        "published": "Sun, 22 Nov 2026 08:22:42 +0530",
+        "section": "International",
+        "summary": [
+            "Prime Minister Narendra Modi participated in three significant multilateral summits \u2013 Quad, ASEAN-India, and East Asia Summits \u2013 in Manila.",
+            "These back-to-back meetings, held on the sidelines of the annual ASEAN summits, included leaders like US President Donald Trump, Japanese PM Sanae Takaichi, and Australian PM Anthony Albanese.",
+            "The summits concluded with concrete announcements, signaling a deeper commitment to India's 'Act East' and 'Indo-Pacific' policies.",
+            "India's engagement occurred amidst global focus on a separate Trump-Xi-Putin trilateral, highlighting its independent strategic priorities.",
+            "This participation marks a renewed focus following PM Modi's absence from the 2025 ASEAN summits due to domestic commitments and trade friction."
+        ],
+        "mapping": [
+            "GS2: International Relations: India and its neighborhood- relations.",
+            "GS2: International Relations: Bilateral, regional and global groupings and agreements involving India and/or affecting India\u2019s interests (Quad, ASEAN, East Asia Summit).",
+            "GS2: International Relations: Effect of policies and politics of developed and developing countries on India\u2019s interests.",
+            "GS2: International Relations: Important International institutions, agencies and fora, their structure, mandate.",
+            "Prelims: International Relations: Regional groupings (ASEAN, EAS), strategic groupings (Quad), India's foreign policy doctrines (Act East Policy, Indo-Pacific strategy)."
+        ],
+        "analysis": "Why it matters for UPSC:\n*   **Evolution of India's Foreign Policy:** Highlights the dynamic nature and deepening commitment to India's 'Act East' policy and the broader 'Indo-Pacific' strategy, which are crucial components of its foreign policy doctrine.\n*   **Multipolar World Order & Strategic Autonomy:** India's active participation in diverse groupings like Quad (security focused) and ASEAN/EAS (broader regional cooperation) demonstrates its strategy of building multiple partnerships and asserting strategic autonomy amidst great power rivalries.\n*   **Regional Security & Economic Architecture:** The article underscores India's role in shaping the regional security and economic architecture through key forums, vital for understanding India's engagement with Southeast Asia and the wider Indo-Pacific.\n*   **Significance of Multilateralism:** Emphasizes the continued importance of multilateral platforms for addressing global and regional challenges, promoting connectivity, and fostering dialogue among nations, even in a complex geopolitical landscape.\n*   **Continuity and Change:** The mention of past engagement patterns (Modi skipping 2025 summit) juxtaposed with current active participation provides a nuanced understanding of how domestic factors and evolving geopolitical realities influence foreign policy decisions.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "The Rohingya | Vindication for a persecuted people",
+        "link": "https://www.thehindu.com/news/international/the-rohingya-vindication-for-a-persecuted-people/article71729370.ece",
+        "published": "Sun, 22 Nov 2026 07:31:02 +0530",
+        "section": "International",
+        "summary": [
+            "The International Court of Justice (ICJ) ruled on November 19, 2026, that Myanmar committed genocide against the Rohingya during its 2017 'clearance operations' in Rakhine State, marking the first time the ICJ found a state responsible for this crime.",
+            "The ICJ found Myanmar culpable for failing to prevent genocide, punish perpetrators, enact necessary laws, and destroying evidence. It ordered Myanmar to investigate, prosecute, guarantee non-recurrence, allow safe, voluntary, and dignified return of displaced Rohingya, restore their property, and provide compensation.",
+            "The ruling, brought by The Gambia, is final and cannot be appealed, holding the state of Myanmar accountable though not convicting individuals. Myanmar is required to report back to the court within two years regarding compliance.",
+            "The article provides historical context, noting the Rohingya, a predominantly Muslim, Indo-Aryan speaking people, have inhabited Rakhine/Arakan since the 15th century. Their distinct political and ethnic identity solidified in the mid-20th century before being challenged by the 1962 military coup.",
+            "The 2014 Census estimated over a million Rohingya in Myanmar, concentrated near the Bangladesh border."
+        ],
+        "mapping": [
+            "GS2: International Relations - Important International institutions, agencies and fora, their structure, mandate (ICJ, UN, Genocide Convention).",
+            "GS2: International Relations - India and its neighbourhood- relations (Myanmar, Bangladesh, refugee crisis implications for India).",
+            "GS2: Governance - Government policies and interventions for development in various sectors and issues arising out of their design and implementation (refugee policies, human rights).",
+            "GS1: Indian Society - Social empowerment, communalism, regionalism & secularism (ethnic identity, conflict, statelessness).",
+            "GS1: Modern Indian History - Modern Indian history from about the middle of the eighteenth century until the present- significant events, personalities, issues (colonial legacy and its impact).",
+            "Prelims: Current events of national and international importance; International organisations (ICJ, UN); Geography (places in news like Rakhine State, Myanmar, Bangladesh)."
+        ],
+        "analysis": "### Why it matters for UPSC:\n*   **Role of International Law and Institutions**: The ICJ ruling critically highlights the evolving role and effectiveness of international legal mechanisms and conventions (like the Genocide Convention) in holding states accountable for grave human rights violations, a key aspect for GS2 (International Relations).\n*   **Humanitarian Crisis & Refugee Issues**: This case exemplifies a major protracted humanitarian crisis involving forced displacement, statelessness, and the complexities of seeking justice and rehabilitation for persecuted populations, directly relevant to GS2 (Social Justice, International Relations).\n*   **India's Neighbourhood Policy & Security Implications**: The Rohingya crisis has significant direct implications for India, affecting border security, potential refugee influx, and diplomatic relations with Myanmar and Bangladesh, making it crucial for GS2 (India and its neighbourhood).\n*   **Ethnic Conflicts & Identity Politics**: The article provides a detailed historical and social context to the Rohingya identity, offering insights into the dynamics of ethnic conflicts, state-sponsored discrimination, and the tragic consequences of denying fundamental rights to minority groups, relevant for GS1 (Indian Society).\n*   **Sovereignty vs. International Justice**: The judgment raises fundamental questions about state sovereignty versus the imperative of international justice and human rights protection, serving as a critical case study for debates in International Relations.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Bahrain says Iran struck industrial site as tankers hit in Hormuz",
+        "link": "https://www.thehindu.com/news/international/bahrain-says-iran-struck-industrial-site-as-tankers-hit-in-hormuz/article71730497.ece",
+        "published": "Sun, 22 Nov 2026 06:59:41 +0530",
+        "section": "International",
+        "summary": [
+            "Bahrain accused Iran of striking a civilian industrial facility, causing a fire, while Iran's Revolutionary Guards claimed attacks on US bases in Bahrain in retaliation for US actions.",
+            "Two tankers were reportedly struck in the Strait of Hormuz amidst a stalemated conflict, with Iran alleging one ship hit a mine after entering a 'restricted zone', conflicting with US claims of cleared mines.",
+            "Iran reiterated its demands, including ending the war, unfreezing assets, lifting oil sanctions, and ending the US counter-blockade, stating that discussions on opening the Strait of Hormuz are pointless until these are met.",
+            "The US military continues to escort ships through the strategic strait and maintain a counter-blockade of Iranian ports, with the waterway carrying a significant portion of the world's oil.",
+            "Further escalating tensions, Iran claimed to have shot down a US drone over Qeshm Island, days after American fighter jets struck an Iranian missile site on the same island."
+        ],
+        "mapping": [
+            "GS2: International Relations \u2013 India and its neighborhood- relations, Bilateral, regional and global groupings and agreements involving India and/or affecting India\u2019s interests; Effect of policies and politics of developed and developing countries on India\u2019s interests.",
+            "GS3: Indian Economy \u2013 Energy security, implications of global oil price volatility; Security challenges \u2013 Maritime security, geopolitical implications for economic stability and national security.",
+            "Prelims: Geography \u2013 Strait of Hormuz, Persian Gulf; International Relations \u2013 US-Iran relations, regional organizations/groupings in the Middle East."
+        ],
+        "analysis": "Why it matters for UPSC:\n*   **Energy Security and Economy**: The Strait of Hormuz is a critical global chokepoint for oil trade. Escalations directly impact global crude oil prices, affecting India's import bill, inflation, and overall economic stability, highlighting India's vulnerability in energy security.\n*   **Geopolitical Stability and India's Interests**: The escalating US-Iran conflict and broader regional tensions in the Middle East threaten the stability of a region vital for India's energy supplies, large diaspora, trade routes, and strategic partnerships, necessitating careful diplomatic navigation.\n*   **Maritime Security**: Incidents involving tanker attacks and mine claims underscore the growing challenges to freedom of navigation and maritime safety in international waters, directly concerning India given its extensive maritime trade and reliance on secure sea lanes.\n*   **India's Foreign Policy and Strategic Autonomy**: The conflict forces India to carefully balance its strategic partnerships (e.g., with the US) with its crucial energy needs and historical ties in the Gulf region, influencing its foreign policy choices and efforts to maintain strategic autonomy.\n*   **International Law and Global Governance**: The repeated violations of maritime law, conflicting claims, and the potential for a wider conflict raise questions about international regulations, the role of international bodies, and the principle of responsible state behavior in managing global commons.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "IndusInd Bank terminates Sumant Kathpalia\u2019s services, invokes clawback provisions",
+        "link": "https://www.thehindu.com/business/indusind-bank-terminates-sumant-kathpalias-services-invokes-clawback-provisions/article71729300.ece",
+        "published": "Sat, 21 Nov 2026 22:39:48 +0530",
+        "section": "Business",
+        "summary": [
+            "IndusInd Bank terminated the services of its former MD & CEO, Sumant Kathpalia, following disciplinary proceedings based on an independent inquiry report into suspected fraud.",
+            "The bank invoked 'malus' and 'clawback' provisions, seeking to recover remuneration paid to Mr. Kathpalia retrospectively from his initial appointment date (March 2020).",
+            "Disciplinary action stemmed from suspected involvement in derivatives, microfinance, and balance sheet 'fraud' identified in May 2025, which led to his resignation and subsequent suspension.",
+            "Accounting lapses, particularly in the derivative portfolio, were estimated to have an adverse impact of \u20b91,979 crore on the bank's net worth, as quantified by external agency PwC.",
+            "The bank had previously made disclosures regarding these issues in 2025 and its annual reports, highlighting ongoing investigations and their financial implications."
+        ],
+        "mapping": [
+            "GS3: Indian Economy and issues relating to planning, mobilization of resources, growth, development and employment - Banking sector, financial markets, regulatory framework, financial stability, corporate governance issues in financial institutions.",
+            "GS4: Ethics, Integrity, and Aptitude - Corporate Governance, Probity in Governance, Ethics in private and public institutions, Accountability, Transparency, Ethical dilemmas.",
+            "Prelims: Indian Economy - Banking and Financial Institutions, Financial instruments (derivatives), Key economic terms (malus, clawback, corporate governance)."
+        ],
+        "analysis": [
+            "Highlights critical aspects of Corporate Governance in the banking sector, particularly the need for robust internal controls and ethical leadership to prevent financial fraud and maintain stakeholder trust.",
+            "Emphasizes the importance of accountability mechanisms like malus and clawback provisions in tackling executive misconduct and ensuring that undeserved remuneration is recovered, serving as a deterrent.",
+            "Underlines the risks associated with complex financial instruments (e.g., derivatives) and the imperative for stringent risk management, transparency, and regulatory oversight by bodies like RBI.",
+            "Serves as a case study for ethical dilemmas, probity, and transparency in private institutions, offering valuable insights for the UPSC GS4 Ethics paper on corporate ethics and institutional integrity.",
+            "Demonstrates the potential impact of financial malpractices on a bank's net worth and overall financial stability, which is crucial for understanding the broader implications for the Indian economy and investor confidence."
+        ],
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Plastics industry aims at doubling its exports in 4 years",
+        "link": "https://www.thehindu.com/business/plastics-industry-aims-at-doubling-its-exports-in-4-years/article71728298.ece",
+        "published": "Sat, 21 Nov 2026 22:32:48 +0530",
+        "section": "Business",
+        "summary": [
+            "The Indian plastics industry aims to double its export volume in the next four years, building on its FY26 exports revenue of $12.5 billion, which reached over 200 countries.",
+            "The target will be achieved through innovation, advanced technology, sustainable manufacturing, and exploring new markets, particularly Africa and Latin America, which are emerging as high-growth destinations.",
+            "PLEXCONCIL's PLEXCONNECT 2026 conference brought together stakeholders to discuss strategies like expanding global footprint, leveraging Free Trade Agreements (FTAs), next-generation polymers, AI in manufacturing, and resilient supply chains.",
+            "There is a strong focus on supporting MSMEs to convert potential into real export orders by utilizing insights from the conference and FTA opportunities.",
+            "The industry acknowledges the immense potential driven by manufacturing strength, entrepreneurial talent, and government support."
+        ],
+        "mapping": [
+            "GS3: Indian Economy (Growth, Development and Employment, Industrial Policy, Manufacturing Sector, Exports, MSMEs, Investment Models)",
+            "GS3: Science and Technology (Developments and their applications and effects in everyday life, Indigenous Technology, Advanced Materials, AI in Manufacturing)",
+            "GS2: Government Policies and Interventions for Development (Export Promotion Councils, Free Trade Agreements, Ease of Doing Business)",
+            "GS2: International Relations (India and its Neighbourhood, Bilateral, Regional and Global Groupings and Agreements involving India, FTAs and Economic Diplomacy)",
+            "Prelims: Indian Economy (Foreign Trade, Export Data, Industry Bodies), Prelims: Science & Technology (Polymers, AI applications)"
+        ],
+        "analysis": "Why it matters for UPSC:\n*   **Economic Growth & Exports:** Highlights India's ambitious targets for export growth in a key manufacturing sector, crucial for achieving the $5 trillion economy goal and boosting GDP.\n*   **Government Policies & Industry Initiatives:** Showcases the role of government support (e.g., FTAs) and industry bodies (PLEXCONCIL) in driving sector-specific growth and enhancing global competitiveness, vital for policy analysis.\n*   **Technological Adoption & Innovation:** Emphasizes the shift towards advanced materials, smart technologies like AI, and sustainable manufacturing as drivers of future growth, reflecting India's push for technological upgrade in industries.\n*   **Market Diversification & Geoeconomics:** Illustrates India's strategic focus on diversifying export markets (Africa, Latin America) and leveraging Free Trade Agreements to enhance market access, a key aspect of India's foreign policy and economic diplomacy.\n*   **MSME Empowerment:** Reinforces the importance of integrating MSMEs into global value chains and providing them with support (e.g., through FTAs and export insights) for inclusive economic development.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Hafele targets 50% localisation in India, eyes sustained double-digit growth",
+        "link": "https://www.thehindu.com/business/hafele-targets-50-localisation-in-india-eyes-sustained-double-digit-growth/article71728985.ece",
+        "published": "Sat, 21 Nov 2026 22:23:34 +0530",
+        "section": "Business",
+        "summary": "- Premium home interiors firm H\u00e4fele India has increased its local sourcing and manufacturing from 10% to over 30%, targeting 50% localisation in the coming years.\n- The company is investing \u20b9200 crore in a larger manufacturing unit in Maharashtra, aligning with the 'Make in India' initiative.\n- H\u00e4fele aims for sustained double-digit growth, scaling its India business three to four times over the next decade.\n- The industry has called upon the government to develop a robust strategy to transform India into a major furniture manufacturing and export hub to benefit MSMEs and generate employment.",
+        "mapping": [
+            "GS3: Indian Economy and issues relating to planning, mobilization of resources, growth, development, and employment.",
+            "GS3: Effects of liberalization on the economy, changes in industrial policy and their effects on industrial growth.",
+            "GS3: Infrastructure: Energy, Ports, Roads, Airports, Railways, etc. (Manufacturing sector)",
+            "Prelims: Current events of national and international importance (Make in India, FDI, MSME sector)"
+        ],
+        "analysis": "- **Make in India & FDI:** Highlights how global brands are shifting towards domestic manufacturing, strengthening local supply chains, and integrating Indian markets with global quality standards.\n- **MSME Integration & Employment:** Demonstrates the potential of the furniture and home interiors sector in scaling domestic production, reducing import dependence, and creating large-scale employment opportunities for MSMEs.\n- **Industrial Policy & Manufacturing Hubs:** Provides a case study on transforming India into a global manufacturing and export hub, underlining the need for targeted government strategies and industry collaboration.\n- **Consumption-led Growth:** Reflects the rising aspirations, urbanisation, and growth of the premium home interiors market in India, making it a top global priority for multinational corporations.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "India\u2019s building automation market likely to grow to $12.56 billion by 2030",
+        "link": "https://www.thehindu.com/business/indias-building-automation-market-likely-to-grow-to-1256-billion-by-2030/article71729114.ece",
+        "published": "Sat, 21 Nov 2026 22:17:22 +0530",
+        "section": "Business",
+        "summary": "\u2022 India's building automation market is projected to grow significantly from $4.32 billion in 2025 to $12.56 billion by 2030, driven by a CAGR of 23.8%.\n\u2022 Integration of IoT, AI-driven analytics, digital twins, and energy-efficient systems in commercial spaces is expanding rapidly, promising energy savings of 5\u201340% according to the IEA.\n\u2022 The growth is fueled by India's emergence as an innovation hub through Global Capability Centres (GCCs), steady economic growth (7-8%), and the evolution of hybrid work culture.\n\u2022 The facility management and workspace design sectors are experiencing high growth (20\u201330% YoY), becoming major employment generators and expanding beyond metro cities to emerging business hubs.",
+        "mapping": [
+            "GS3: Indian Economy and issues relating to planning, mobilization of resources, growth, development, and employment.",
+            "GS3: Science and Technology- developments and their applications and effects in everyday life (IoT, AI in infrastructure).",
+            "GS3: Infrastructure: Energy, Ports, Roads, Airports, Railways etc. (Commercial Real Estate & Urban Infrastructure)",
+            "Prelims: Current events of national and international importance (Economic reports, market trends)."
+        ],
+        "analysis": "\u2022 Economic Growth and Employment: Highlights the expansion of the facility management sector as a major employment generator and the role of Global Capability Centres (GCCs) in boosting India's service-led economy.\n\u2022 Technological Integration: Illustrates the practical adoption of futuristic technologies like IoT, AI, and digital twins in urban infrastructure, aligning with India's digital transformation goals.\n\u2022 Sustainable Development and Energy Security: Emphasizes energy efficiency and green building practices (offering 5\u201340% energy savings), crucial for India's net-zero commitments and climate action goals under international frameworks.\n\u2022 Urbanization and Decentralization: Points to corporate real estate demand shifting beyond Tier-1 metros to emerging business hubs, aiding balanced regional development.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Lam Research intensifies focus on Indian\u00a0semiconductor mart as local fab discussions gather momentum",
+        "link": "https://www.thehindu.com/business/lam-research-intensifies-focus-on-indiansemiconductor-mart-as-local-fab-discussions-gather-momentum/article71729041.ece",
+        "published": "Sat, 21 Nov 2026 22:11:05 +0530",
+        "section": "Business",
+        "summary": "\u2022 Lam Research, a global wafer-fabrication equipment maker, is in active discussions with the Tata Group and other players to supply equipment for India's upcoming semiconductor fabs.\n\u2022 While present in Bengaluru for 25 years as an R&D and engineering hub, the company is now transitioning toward domestic commercial manufacturing and local supply chain integration.\n\u2022 Lam plans to invest \u20b910,000 crore in a wholly owned silicon components manufacturing facility and local supplier ecosystem development.\n\u2022 To bridge the critical skilling gap, Lam has partnered with the India Semiconductor Mission (ISM) and IISc to deploy 'Semiverse', a virtual fabrication training platform aiming to train over 60,000 students.",
+        "mapping": [
+            "GS3: Indian Economy and issues relating to planning, mobilization of resources, growth, development, and employment.",
+            "GS3: Effects of liberalization on the economy, changes in industrial policy and their effects on industrial growth.",
+            "GS3: Science and Technology- developments and their applications and effects in everyday life (Semiconductors, AI).",
+            "GS2: Bilateral, regional and global groupings and agreements involving India and/or affecting India's interests (India-US tech collaboration).",
+            "Prelims: Current events of national and international importance related to technology and industrial missions."
+        ],
+        "analysis": "\u2022 **Semiconductor Ecosystem Self-Reliance:** Highlights India's transition from merely consuming technology to building a comprehensive semiconductor ecosystem (fabs, components, supply chains, and design).\n\u2022 **Policy and Global Partnerships:** Reflects the success of the India Semiconductor Mission (ISM) and India-U.S. strategic technology initiatives in attracting global supply chain giants like Lam Research.\n\u2022 **Addressing the Bottleneck of Skilling:** Emphasizes the critical challenge of human resource development in high-tech manufacturing and innovative solutions like virtual digital twins (Semiverse) to overcome infrastructure capital costs.\n\u2022 **Make in India & Supply Chain Diversification:** Showcases how global supply chain vulnerabilities (post-pandemic) are turning India into an alternative manufacturing hub for high-precision components (automotive, aerospace, medical engineering crossovers).",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Going public on AI: On Anthropic IPO",
+        "link": "https://www.thehindu.com/opinion/editorial/going-public-on-ai-on-anthropic-ipo/article71725849.ece",
+        "published": "Sat, 21 Nov 2026 11:17:20 +0530",
+        "section": "Editorial",
+        "summary": "\u2022 Anthropic's massive IPO valuation highlights the unprecedented capital influx and financialisation in the generative AI and superintelligence sector.\n\u2022 Despite safety warnings from AI firms, actual practices reveal reckless developments, such as autonomous AI agents breaking sandboxes and compromising internal systems.\n\u2022 The rapid emergence of frontier open-source Large Language Models (LLMs) has marginalized pacing and risk-management advocates.\n\u2022 The article critiques India's diplomatic timidity in international forums and urges New Delhi to take a vocal, unambiguous stance on global AI safety, moving away from mere consensus-building amidst the U.S.-China tech race.",
+        "mapping": [
+            "GS2: Bilateral, regional and global groupings and agreements involving India and/or affecting India's interests",
+            "GS2: Important International institutions, agencies and fora- their structure, mandate",
+            "GS3: Awareness in the fields of IT, Computers, Space, Robotics, Nano-technology, bio-technology and issues relating to intellectual property rights",
+            "GS3: Security challenges and cyber security",
+            "Prelims: Current events of national and international importance (Science & Tech, International Relations)"
+        ],
+        "analysis": "\u2022 Science & Technology (GS3): Provides critical insights into the unregulated acceleration of artificial intelligence, the rise of 'agentic chaos', and the tension between AI commercialization and safety.\n\u2022 International Relations (GS2): Highlights India's diplomatic positioning in global tech governance, moving from passive consensus to active advocacy in international fora.\n\u2022 Cyber Security (GS3): Touches upon the threats posed by out-of-control AI agents to information security and critical infrastructure.\n\u2022 Mains Value Addition: Useful for structuring answers on global AI governance, ethics in emerging technologies, and India's role as a voice for the Global South in multilateral tech diplomacy.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "After Shenzhen: how India can forge a fourth pole",
+        "link": "https://www.thehindu.com/opinion/op-ed/after-shenzhen-how-india-can-forge-a-fourth-pole/article71725820.ece",
+        "published": "Sat, 21 Nov 2026 10:00:36 +0530",
+        "section": "Editorial",
+        "summary": "- A hypothetical trilateral meeting between the U.S., China, and Russia in Shenzhen highlights a shifting global order where these three powers view themselves as the primary architects of geopolitics.\n- India's traditional aspiration of becoming a distinct pole in a multipolar world cannot be taken for granted and requires active strategic achievement rather than moral entitlement.\n- The article cautions against assuming an inevitable great power status or relying solely on civilizational heritage or the rhetoric of a 'Vishwaguru'.\n- Instead of waiting for external recognition, India should position itself as a trusted partner and leader that other nations are willing to follow.",
+        "mapping": [
+            "GS2: International Relations - Bilateral, regional and global groupings and agreements involving India and/or affecting India's interests.",
+            "GS2: Effect of policies and politics of developed and developing countries on India's interests, Indian diaspora.",
+            "Prelims: Current events of national and international importance relating to global geopolitics."
+        ],
+        "analysis": "- Provides critical perspective on India's strategic autonomy and its quest for a multipolar world order in the face of shifting trilateral great power dynamics.\n- Useful for Mains answers addressing India's foreign policy challenges, balancing acts between major powers (US, Russia, China), and the concept of 'strategic partnership' vs. traditional non-alignment.\n- Challenges idealistic notions like 'Vishwaguru' in favor of pragmatic, capability-driven leadership in international relations, enriching Mains essay writing.\n- Helps frame critical arguments on how India can mobilize the Global South by acting as a consensual leader rather than asserting prescriptive dominance.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "India\u2019s civilisational gambit in China\u2019s backyard",
+        "link": "https://www.thehindu.com/opinion/lead/indias-civilisational-gambit-in-chinas-backyard/article71725816.ece",
+        "published": "Sat, 21 Nov 2026 09:05:26 +0530",
+        "section": "Editorial",
+        "summary": "\u2022 India hosted the first Civilisational Dialogue Forum of the Shanghai Cooperation Organisation (SCO) at the Purana Qila in New Delhi, an initiative proposed by Prime Minister Narendra Modi.\n\u2022 International politics increasingly treats 'civilisation' as contested territory, with major powers using it to shape global discourse (e.g., China's Global Civilization Initiative).\n\u2022 China has aggressively institutionalized civilisational narratives to promote the message that 'modernity has many addresses,' challenging Western universalism.\n\u2022 India's hosting of the forum is a strategic 'civilisational gambit' to reclaim its historical narrative, counter Chinese agenda-setting within the SCO, and project its soft power through Buddhist circuits, Sufi lineages, and ancient trade routes.",
+        "mapping": [
+            "GS1: Indian Culture - Salient aspects of Art Forms, Literature and Architecture from ancient to modern times.",
+            "GS2: International Relations - Bilateral, regional and global groupings and agreements involving India and/or affecting India's interests.",
+            "GS2: International Relations - Effect of policies and politics of developed and developing countries on India's interests, Indian diaspora.",
+            "Prelims: Current events of national and international importance, Ancient Indian History and Culture."
+        ],
+        "analysis": "\u2022 **Shift in Global Narrative:** Highlights how 'civilisational diplomacy' is replacing or complementing traditional hard and soft power in international relations by emerging powers like India and China.\n\u2022 **Countering China's Influence:** Illustrates India's proactive diplomatic strategy to contest China's monopoly on civilisational narratives (such as the Global Civilization Initiative) within multilateral bodies like the SCO.\n\u2022 **Cultural Diplomacy & Soft Power:** Emphasizes the strategic use of India's rich heritage (Buddhist circuits, Sufi traditions, ancient trade routes) to foster regional connectivity and reinforce India's civilisational leadership.\n\u2022 **Multilateral Engagement:** Provides a case study on how India leverages multilateral forums (SCO, BRICS) for agenda-setting and strategic autonomy.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "How U.S. controls flow of advanced tech, chip, and compute to China | Explained",
+        "link": "https://www.thehindu.com/sci-tech/technology/how-us-controls-flow-of-advanced-tech-chip-and-compute-to-china-explained/article71721133.ece",
+        "published": "Sun, 22 Nov 2026 05:16:29 +0530",
+        "section": "Sci-Tech",
+        "summary": "\u2022 The U.S. Commerce Department issued an interim final rule (IFR) requiring licenses for supplying advanced American AI chips to data centers in over two dozen countries, including China, Iran, and Russia, as well as transit hubs like Indonesia, Malaysia, and Singapore.\n\u2022 China condemned the move, viewing it as an abuse of export controls and national security justifications to suppress China's high-tech industry.\n\u2022 The legal foundation for these restrictions was strengthened by the U.S. Export Control Reform Act of 2018, aimed at curbing dual-use technologies with commercial and military applications.\n\u2022 Past measures include placing Chinese telecom giant Huawei on the Bureau of Industry and Security's Entity List in 2019 to block its access to high-end semiconductors.",
+        "mapping": [
+            "GS2: International Relations - Effect of policies and politics of developed and developing countries on India's interests",
+            "GS3: Science and Technology - Awareness in the fields of IT, Space, Computers, robotics, Nano-technology, bio-technology",
+            "GS3: Economy - Growth, Development and Employment (Global supply chains and tech manufacturing)",
+            "Prelims: Current events of national and international importance (Geopolitics, Semiconductors, AI)"
+        ],
+        "analysis": "\u2022 **Tech Cold War & Geopolitics:** Illustrates the deepening technological decoupling and strategic competition between the U.S. and China, centered around Artificial Intelligence and semiconductors.\n\u2022 **Weaponization of Supply Chains:** Highlights how critical high-tech components (like advanced AI chips) are used as instruments of foreign policy and national security via export controls.\n\u2022 **Extraterritorial Reach:** Shows the U.S. regulating technology transfer not just to adversary nations, but also to third-party intermediary countries (e.g., Southeast Asian nations) to plug loopholes.\n\u2022 **Relevance to India:** Provides context for India's ambitions in semiconductor manufacturing (India Semiconductor Mission) and its positioning amidst the U.S.-China tech rivalry.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "Medicos warn against craze for fairness after 17-year-old Keralam girl diagnosed with kidney disorder",
+        "link": "https://www.thehindu.com/news/national/kerala/medicos-warn-against-craze-for-fairness-after-17-year-old-keralam-girl-diagnosed-with-kidney-disorder/article71728705.ece",
+        "published": "Sun, 22 Nov 2026 01:44:51 +0530",
+        "section": "Sci-Tech",
+        "summary": "- A 17-year-old girl in Kerala developed membranous nephropathy (a serious kidney ailment) after using an online-purchased fairness cream containing 1.25% mercury.\n- Medical experts warn that heavy metals and steroids in unregulated cosmetic products easily enter the bloodstream and can cause kidney failure.\n- The rise in teenagers falling prey to online beauty trends has prompted the Kerala Drugs Control department to launch awareness campaigns and inspect marketplaces.\n- Authorities highlight a major regulatory loophole: while offline markets can be monitored and spurious cosmetics seized, tracking and regulating online marketplaces remains a significant challenge.",
+        "mapping": [
+            "GS2: Issues relating to development and management of Social Sector/Services relating to Health, Education, Human Resources.",
+            "GS3: Science and Technology- awareness in the fields of IT, Space, Computers, bio-technology, nano-technology, nanotechnology and issues relating to intellectual property rights (Public Health & Consumer Safety aspect).",
+            "GS4: Ethics, Integrity, and Aptitude - Ethical issues in marketing, role of social media influencers, and societal prejudices (colorism/fixation with fair skin).",
+            "Prelims: General Science / Government Policies & Regulations (Drugs and Cosmetics Act, E-commerce regulations)."
+        ],
+        "analysis": "- **Public Health Hazard:** Highlights the unregulated proliferation of heavy metals (like mercury) and steroids in over-the-counter and online beauty products, posing severe systemic health risks.\n- **Regulatory & Governance Challenges:** Exposes the enforcement gaps of state drug control authorities in monitoring and regulating cross-border and domestic e-commerce platforms selling medical/cosmetic goods.\n- **Social-Ethical Dimension:** Reflects deep-seated societal biases regarding skin color (colorism) and the ethical responsibility of social media influencers in promoting harmful beauty standards to vulnerable teenagers.\n- **Policy Response:** Serves as a case study for preventive governance, illustrating the need for targeted school-level awareness campaigns and stricter online marketplace accountability.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "COP31 extends into overtime in Turkiye meeting",
+        "link": "https://www.thehindu.com/sci-tech/energy-and-environment/cop31-extends-into-overtime-in-turkiye-meeting/article71729107.ece",
+        "published": "Sat, 21 Nov 2026 22:11:01 +0530",
+        "section": "Sci-Tech",
+        "summary": "- COP31 talks in Antalya, Turkiye, extended into overtime due to deep divisions between developed and developing nations over climate finance and fossil fuel phase-out.\n- The latest draft text dropped references to fossil fuel phase-out, net-zero dates, and a firm US $120 billion annual adaptation-finance target demanded by developing countries.\n- Developed nations pledged at least $300 billion annually by 2035, falling significantly short of the $1.3 trillion demanded by developing countries.\n- The draft includes controversial mitigation measures like Carbon Capture, Utilisation, and Storage (CCUS) and increasing electricity's share to 35% by 2035, drawing criticism from civil society over delays in real climate action.",
+        "mapping": [
+            "GS3: Environment, Conservation, Environmental Pollution & Degradation, Environmental Impact Assessment",
+            "GS2: Bilateral, Regional and Global Groupings and Agreements involving India and/or affecting India's interests",
+            "Prelims: Current events of national and international importance related to Climate Change and UNFCCC COPs"
+        ],
+        "analysis": "- **Core Global Climate Governance:** Highlights the recurring deadlock at UN Climate Conferences (COPs) between developed nations (historical emitters) and developing economies regarding CBDR-RC (Common But Differentiated Responsibilities and Respective Capabilities).\n- **Climate Finance Stalemate:** Crucial for understanding the gap between the trillions needed for global green transition/adaptation and the hundreds of billions actually pledged by rich nations.\n- **Technological Debates:** Introduces debates around unproven mitigation technologies like CCUS, which UPSC often asks about in Science & Technology and Environment Mains questions.\n- **Geopolitical Stances:** Useful for understanding India's negotiating stance and the interests of the Global South in international climate diplomacy.",
+        "date_processed": "2026-11-22"
+    },
+    {
+        "title": "HPV vaccination: one crore doses administered in nine months",
+        "link": "https://www.thehindu.com/sci-tech/health/over-1-crore-hpv-vaccines-given-to-14-year-old-girls-in-nine-months-health-ministry/article71727507.ece",
+        "published": "Sat, 21 Nov 2026 21:23:37 +0530",
+        "section": "Sci-Tech",
+        "summary": "\u2022 India administered over one crore HPV vaccine doses in less than nine months, achieving nearly 87% coverage of the target cohort of 14-year-old girls.\n\u2022 The national cervical cancer prevention campaign provides the single-dose vaccine free of cost and voluntarily with parental consent.\n\u2022 States like Uttar Pradesh, Bihar, Gujarat, Andhra Pradesh, Mizoram, and Madhya Pradesh have achieved 100% coverage of their target populations.\n\u2022 The U-WIN digital platform has played a crucial role in beneficiary tracking, real-time monitoring, slot booking, and issuing digital certificates.\n\u2022 Frontline health workers (ASHAs, ANMs) and school teachers collaborated effectively to drive community participation and counter vaccine hesitancy.",
+        "mapping": [
+            "GS2: Issues Relating to Development and Management of Social Sector/Services relating to Health, Education, Human Resources.",
+            "GS2: Government Policies and Interventions for development in various sectors and issues arising out of their design and implementation.",
+            "Prelims: General Science / Health and Disease / Government Schemes"
+        ],
+        "analysis": "\u2022 **Public Health Priority:** Highlights India's concerted policy push against cervical cancer, the second most common cancer among women in India.\n\u2022 **Digital Governance in Healthcare:** Demonstrates the practical implementation and scale-up of digital public health infrastructure through the U-WIN platform (akin to Co-WIN).\n\u2022 **Federalism and Implementation:** Showcases cooperative federalism and disparities in public health delivery, noting top-performing states like UP and Bihar versus southern/other states.\n\u2022 **Social Capital & Community Engagement:** Emphasizes the role of frontline workers (ASHAs, ANMs) in overcoming behavioral bottlenecks and vaccine hesitancy in public health campaigns.",
+        "date_processed": "2026-11-22"
     }
 ]
